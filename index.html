@@ -10,7 +10,7 @@
 
 	<title></title>
 
-<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
   	<link rel="stylesheet" href="css/component.css">
@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/vegas.min.css">
 	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/EstilosIncidentes.css">
 
 	<!-- Google web font  -->
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
@@ -200,18 +201,107 @@
 </section>
 
 
-<!-- Gallery section -->
+<!-- Incidentes section -->
+<!-- Mostrar facilmente los atributos importantes de los incidentes: Autor, fecha, nombre del incidente, servicio afectado, link a detalles -->
 <section id="gallery">
   <div class="container">
+
     <div class="row">
 
       <div class="col-md-offset-2 col-md-8 col-sm-12 wow fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
         <div class="section-title">
-          <h1>GALERIA DE INCIDENTES</h1>
-          <p>Nullam scelerisque, quam nec iaculis vulputate, arcu ligula sollicitudin nisl, ac volutpat erat nulla a arcu.</p>
+          <h1>LISTADO DE INCIDENTES</h1>
+          <p>Consulta los incidentes reportados por miembros de las distintas comunidades para conocer el estado de los servicios que soles utilizar</p>
         </div>
       </div>
+    </div>
+      <form action="generar_listado.java" method="post">
 
+          <label for="estado_incidente">Filtra por estado:</label>
+          <select name="estado" id="estado_incidente">
+              <option value="abierto">Abierto</option>
+              <option value="cerrado">Cerrado</option>
+          </select>
+      </form>
+
+        <ul class="cards">
+            <li class="card">
+                <div class="card-cabecera">
+                        <div class="card-cabecera-titulo">
+                            <h3 class="card-title">Servicio1</h3>
+                            <h6 class="card-subtitle">Entidad1</h6>
+                        </div>
+                    <div class="badge badge-error">Abierto</div>
+                </div>
+                <div class="card-detalle">
+                    El ascensor no funciona
+                </div>
+                <div class="card-link-wrapper">
+                    <a href="" class="card-link">Mas detalles</a>
+                </div>
+            </li>
+            <li class="card">
+                <div class="card-cabecera">
+                    <div class="card-cabecera-titulo">
+                        <h3 class="card-title">Servicio3</h3>
+                        <h6 class="card-subtitle">Entidad2</h6>
+                    </div>
+                    <div class="badge badge-success">Cerrado</div>
+                </div>
+                <div class="card-detalle">
+                    Goteras en las escaleras, riesgo de resbalarse
+                </div>
+                <div class="card-link-wrapper">
+                    <a href="" class="card-link">Mas detalles</a>
+                </div>
+            </li>
+            <li class="card">
+                <div class="card-cabecera">
+                    <div class="card-cabecera-titulo">
+                        <h3 class="card-title">Servicio4</h3>
+                        <h6 class="card-subtitle">Entidad3</h6>
+                    </div>
+                    <div class="badge badge-error">Abierto</div>
+                </div>
+                <div class="card-detalle">
+                    No hay rampa para silla de ruedas
+                </div>
+                <div class="card-link-wrapper">
+                    <a href="" class="card-link">Mas detalles</a>
+                </div>
+            </li>
+            <li class="card">
+                <div class="card-cabecera">
+                    <div class="card-cabecera-titulo">
+                        <h3 class="card-title">Servicio2</h3>
+                        <h6 class="card-subtitle">Entidad1</h6>
+                    </div>
+                    <div class="badge badge-error">Abierto</div>
+                </div>
+                <div class="card-detalle">
+                    No hay papel en el baño
+                </div>
+                <div class="card-link-wrapper">
+                    <a href="" class="card-link">Mas detalles</a>
+                </div>
+            </li>
+            <li class="card">
+                <div class="card-cabecera">
+                    <div class="card-cabecera-titulo">
+                        <h3 class="card-title">Servicio1</h3>
+                        <h6 class="card-subtitle">Entidad1</h6>
+                    </div>
+                    <div class="badge badge-success">Cerrado</div>
+                </div>
+                <div class="card-detalle">
+                    Baño clausurado
+                </div>
+                <div class="card-link-wrapper">
+                    <a href="" class="card-link">Mas detalles</a>
+                </div>
+            </li>
+        </ul>
+<!--
       <ul class="grid cs-style-4">
         <li class="col-md-6 col-sm-6">
           <figure>
@@ -257,10 +347,12 @@
           </figure>
         </li>
       </ul>
+-->
 
-    </div>
   </div>
 </section>
+
+
 <!-- Contact section -->
 
 <section id="contact">
